@@ -29,13 +29,14 @@ public class PhrasesActivity extends AppCompatActivity {
         phrases.add(new Word("Come here.", "әnni'nem"));
 
         //Create the ArrayAdapter
-        WordAdapter phrasesAdapter = new WordAdapter(this, phrases);
+        WordAdapter phrasesAdapter = new WordAdapter(this, phrases, R.color.category_phrases);
 
         //Find the ListView
         ListView listView = (ListView)findViewById(R.id.list);
 
         //Add the ArrayAdapter to the ListView
         listView.setAdapter(phrasesAdapter);
+
 
     }
 }

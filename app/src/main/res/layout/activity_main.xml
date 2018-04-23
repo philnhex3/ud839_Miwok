@@ -23,7 +23,6 @@
     tools:context="com.example.android.miwok.MainActivity"
     >
 
-
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
