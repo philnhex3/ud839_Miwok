@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,7 +66,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
 
         //Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        final Word currentWord = getItem(position);
 
         //find the TextView in the list_item.xml layout with the ID miwok_text
         TextView miwokTextView = (TextView)listItemView.findViewById(R.id.miwok_text);
@@ -102,6 +103,22 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
+
+       /**
+        //Create an onClick directive that plays the audio
+        textContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Find the audio resource ID
+                int audio = currentWord.getAudioResourceId();
+                // Initialize the MediaPlayer on creation of each word object
+                final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), audio);
+                mediaPlayer.start();
+
+            }
+        });
+        */
 
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView

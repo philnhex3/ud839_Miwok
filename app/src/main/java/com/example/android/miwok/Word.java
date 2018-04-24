@@ -13,16 +13,26 @@ public class Word {
 
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    /** Audio file associated with the word */
+    private int mAudioResourceId;
+
     /** The constructor of the class */
     public Word(String defaultTranslation, String miwokTranslation){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID){
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
+    }
+
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int audioResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceID = imageResourceID;
+        mAudioResourceId = audioResourceId;
     }
 
     // To get the default translation of the word
@@ -42,6 +52,9 @@ public class Word {
     public boolean hasImage() {
         return mImageResourceID != NO_IMAGE_PROVIDED;
     }
+
+    //To get the resource ID of the audio file
+    public int getAudioResourceId(){return mAudioResourceId;}
 
 
 
