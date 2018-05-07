@@ -14,36 +14,50 @@
             android:background="#FFF7DA"
             />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/text_container"
-            >
+            android:layout_height="match_parent">
 
-            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/miwok_text"
-                tools:text="Sample Miwok"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/text_container"
+                >
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/miwok_text"
+                    tools:text="Sample Miwok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:gravity="bottom"
+                    android:layout_weight="1"
+                    />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/default_text"
+                    tools:text= "Sample English"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    />
+            </LinearLayout>
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:paddingLeft="16dp"
-                android:gravity="bottom"
-                android:layout_weight="1"
+                android:src="@drawable/ic_play_arrow"
+                android:layout_alignRight="@id/text_container"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
                 />
-
-            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/default_text"
-                tools:text= "Sample English"
-                android:textSize="18sp"
-                android:textColor="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="top"
-                android:layout_weight="1"
-                android:paddingLeft="16dp"
-                />
-        </LinearLayout>
+        </RelativeLayout>
 </LinearLayout>

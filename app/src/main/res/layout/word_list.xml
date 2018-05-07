@@ -7,4 +7,5 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.miwok.NumbersActivity"
     android:background="@color/category_family"
+    android:drawSelectorOnTop="true"
     />

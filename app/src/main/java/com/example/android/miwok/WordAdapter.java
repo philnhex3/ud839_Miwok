@@ -104,22 +104,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
 
-       /**
-        //Create an onClick directive that plays the audio
-        textContainer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // Find the audio resource ID
-                int audio = currentWord.getAudioResourceId();
-                // Initialize the MediaPlayer on creation of each word object
-                final MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), audio);
-                mediaPlayer.start();
-
-            }
-        });
-        */
-
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView
         return listItemView;
